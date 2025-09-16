@@ -20,7 +20,7 @@ Architecture of Kubernetes
     5. etcd
    
 
-2. Control Plane Components
+# Control Plane Components
 
 These run on the master node(s) and manage the cluster:
 
@@ -34,4 +34,15 @@ Controller Manager- Runs controllers that watch the cluster state and reconcile 
 
 Cloud Controller Manager- Integrates with the underlying cloud provider for services like load balancers, storage, and networking.
 
+# Worker Node Components
+
+Each worker node runs services required to host and manage application pods:
+
+Kubelet- An agent that runs on each node. Ensures containers are running as expected. Talks to the API server.
+
+Kube-Proxy- Manages networking and load balancing for services. Handles communication between pods and external clients.
+
+Container Runtime- Software to run containers (Docker, containerd, CRI-O, etc.).
+
+Pulls images and starts/stops containers.
        
